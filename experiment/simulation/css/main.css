@@ -1,1 +1,174 @@
-/* You CSS goes in here */
+/*.simulatorDiv {
+	width:100%;
+	height:420px;
+	background-color:#0099FF;
+	background-image:url(../images/calibration-of-inclined-tube-manometer-using-askania-minimeter.jpg);
+	background-repeat:no-repeat;
+}*/
+
+.clearfix {
+	clear:both;
+}
+
+.leftContentSimulator {
+	float:left;
+	width:640px;
+	height:550px;
+	background-image:url(../images/determination-of-method-factor-of-a-duct.jpg);
+	background-position:left top;
+	background-repeat:no-repeat;
+}
+.ovalDiv {
+	width:130px;
+	height:80px;
+	background-image:url(../images/table.jpg);
+	background-position:left top;
+	background-repeat:no-repeat;
+	position:relative;
+	top:150px;
+	left:81px;
+}
+.oval_img {
+	display:none;
+	width:55px !important;
+	height:166px !important;
+	position: relative;
+    top: 295px;
+	left:81px;
+    z-index: 999;
+}
+
+
+.rightSidebarSimulator {
+	display:none;
+	float:right;
+	width:275px;
+	min-height:625px;
+	background-color:#33FFFF;
+}
+.rightSidebarSimulator h2 {
+	border-bottom:1px solid #000;
+	text-align:center !important;
+	margin-left:0px !important;
+	padding-bottom:2px !important;
+	margin-bottom:10px !important;
+}
+.mesTable {
+	margin-left:0 !important;
+	margin-bottom:30px !important;
+	text-align:center !important;
+}
+.mtSingle {
+    width: 100%;
+    clear: both;
+    padding: 5px 0;
+    border-bottom: 1px solid #000;
+}
+#mtsvr1, #mtsvr2, #mtsvr3 {
+	display:none;
+}	
+.mtSingle label {
+	display: block;
+    float: left;
+    width: 175px;
+    font-size: 14px;
+}
+#measureBttn,.measureDiv,#calculateBttn, .calculateDiv, #addResultBttn, .yesDiv, .graphDiv {
+	display:none;
+}
+/*.mesTable tr {
+	display:none;
+}
+.mesTable th {
+	text-transform:none !important;
+	font-size:11px!important;
+	padding:0 !important;
+}
+.mesTable td {
+	padding:0 !important;
+}*/
+.mesTable input[type=text] {
+	width:50px;
+}
+.ductDiv {
+	width: 300px;
+    height: 80px;
+    border: 0px solid red;
+    position: relative;
+    top: 105px;
+    left: 250px;
+}
+#diam_duct {
+	width:60px;
+}
+.cust_lebel {
+	font-size:15px;
+}
+.aniDiv {
+	text-align:center;
+}
+#velReadBttn {
+	display:none;
+}
+.addTableData th {
+	font-size:9px !important;
+	padding:3px !important
+}
+.addTableData td {
+	font-size:13px !important;
+	text-align:center !important;
+	padding:3px !important;
+}
+.ovelShapes {
+	width:95px;
+	height:176px;
+}
+.animometerDiv {
+	display:none;
+	float:right;
+	position:relative;
+	right:150px;
+	width:130px;
+	height:280px;
+	background-image:url(../images/user.png);
+	background-position:bottom right;
+	background-repeat:no-repeat;
+}
+#anemometer {
+	width: 25px !important;
+    height: 176px !important;
+    position: relative;
+    top: 100px;
+    left: 78px;
+}
+
+.redWrapper {
+	height: 110px;
+    width: 107px;
+    position: relative;
+    left: 330px;
+    top: 18px;
+}
+.red_tube {
+	position: relative;
+    width: 142px;
+    height: 4px;
+    background-color: #ccc;
+    -ms-transform: rotate(-46deg);
+    -webkit-transform: rotate(-46deg);
+    transform: rotate(-46deg);
+    top: 51px;
+    left: -18px;
+}
+.red_tube .dynm_red_div{
+	width:0px;
+}
+.red_tube_class {
+	height:4px;
+	background-color:#FF0000;
+}
+
+h1.exp_header {
+	text-align: center;
+    font-size: 20px;
+}
