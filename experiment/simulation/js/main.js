@@ -219,7 +219,7 @@ var rows;
 function showgraph(){
 
 var otable= document.getElementById('table');
-alert(otable.rows.length);
+
 for (var tabrowindex = 1; tabrowindex < otable.rows.length; tabrowindex++) {
 	var rwe1 = otable.rows[tabrowindex].cells;
 	 
@@ -241,7 +241,42 @@ var data = [
   };
   
   Plotly.newPlot("myPlot", data, layout);
-
+  document.getElementById('bestgraphBttn').style.display="block";
   
 }
 
+function bestshowgraph(){
+	document.getElementById('myPlotb').style.display="block";
+
+	var otable= document.getElementById('table');
+
+	for (var tabrowindex = 1; tabrowindex < otable.rows.length; tabrowindex++) {
+		var rwe1 = otable.rows[tabrowindex].cells;
+		 
+		//dataPointai.push( {  y: parseFloat(rwe1[1].innerHTML), x:parseFloat(rwe1[2].innerHTML)});
+		xArray.push(parseFloat(rwe1[1].innerHTML));
+		yArray.push(parseFloat(rwe1[0].innerHTML));
+		
+	}
+	var xSum = xArray.reduce(function(a, b){return a + b;}, 0);
+   var ySum = yArray.reduce(function(a, b){return a + b;}, 0);
+   var slope = ySum / xSum;
+   var xValues = [];
+   var yValues = [];
+   for (var x = 0; x <= 20; x += 1) {
+	 xValues.push(x);
+	 yValues.push(x * slope);
+   }
+	var data = [
+		{x:xArray, y:yArray, mode:"markers"},
+        {x:xValues, y:yValues, mode:"line"}
+	  ];
+	  
+	  var layout = {
+		xaxis: {range: [0, 10],dtick: 1, title: "Central Velocity "},
+		yaxis: {range: [1, 10],dtick: 1, title: "Average Velocity"},  
+		title: "Central Velocity Vs Average Velocity"
+	  };
+	  
+	  Plotly.newPlot("myPlot", data, layout);
+}
