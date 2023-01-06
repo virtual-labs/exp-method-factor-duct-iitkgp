@@ -246,7 +246,7 @@ var data = [
 }
 
 function bestshowgraph(){
-	document.getElementById('myPlotb').style.display="block";
+	//document.getElementById('myPlotb').style.display="block";
 
 	var otable= document.getElementById('table');
 
