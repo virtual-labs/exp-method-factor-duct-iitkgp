@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Add CSS at the head of HTML file -->
+    <link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/default.css">
+	<link rel="stylesheet" href="./css/override.css">
+	<link rel="stylesheet" href="./css/style.css">
+	
+</head>
+<body>
+	<div class="content" id="experiment-article-section-9-content">    
+		<h1 class="exp_header">Determination of method factor of a duct</h1>
+		<div class="leftContentSimulator">
+			<div class="animometerDiv" >
+				<img src="images/anemometerr.png" id="anemometer" width="25" height="176">
+			</div><!-- end of .ME_divLeft -->
+
+			<div class="ovelShapes" >
+				<img src="images/oval1.png" name="oval_img" id="oval_img1" class="oval_img" width="55" height="166">
+				<img src="images/oval2.png" name="oval_img" id="oval_img2" class="oval_img" width="55" height="166">
+				<img src="images/oval3.png" name="oval_img" id="oval_img3" class="oval_img" width="55" height="166">
+				<img src="images/oval4.png" name="oval_img" id="oval_img4" class="oval_img" width="55" height="166">
+			</div><!-- end of .ovelShapes -->
+			
+			<div class="redWrapper">
+				<div class="red_tube"><div class='dynm_red_div'></div></div>
+			</div><!-- end of .redWrapper -->
+
+			<div class="ovalDiv"></div>
+			
+			<div class="ductDiv">
+				<div class="inputDiv" >
+					<!--<label class="cust_lebel">Diameter of the Duct : </label>-->
+					Diameter of the Duct : <input type="text" name="diam_duct" id="diam_duct" value="" />
+					<input type="button" name="dd_submitBtn" id="dd_submitBtn" value="Ok" />
+				</div><!-- end of .inputDiv -->
+				<div class="yesDiv" >
+					Do you want to take another flow control device to measure the method factor?
+					<input type="button" name="yesBttn" id="yesBttn" value="Yes" />
+				</div><!-- end of .yesDiv -->
+				<div class="graphDiv" >
+					For Plotting the graph for methof factor, please click the button
+					<input type="button" name="graphBttn" id="graphBttn" onclick="showgraph();"  value="Show Graph" /> <br>
+					<input type="button" name="graphBttnbest" id="bestgraphBttn" onclick="bestshowgraph();"  style="display: none;" value="Show Best Fit Graph" />
+					
+					
+					<div id="myPlot"  id="printable" style="height:400px; width:400px;  display: block;"></div> 
+					
+					
+				</div><!-- end of .yesDiv -->
+			</div><!-- end of .ductDiv -->
+		</div><!-- end of .leftContentSimulator -->                
+		<div class="rightSidebarSimulator" >
+			<h2 >Measuring Table</h2>
+			<div class="aniDiv" >
+				<input type="button" id="aniBttn" value="Animometer Traversing" />
+				<input type="button" id="velReadBttn" value="Velocity Reading" />
+			</div><!-- end of .aniDiv -->
+			
+			<div class="mesTable" >
+				<div class="mtSingle" id="mtsvr1">
+					<label>1st Velocity Reading</label> : &nbsp; <input type="text" name="vr1" id="vr1" value="" readonly="readonly" />
+				</div><!-- end of .mtSingle -->
+				<div class="mtSingle" id="mtsvr2">
+					<label>2nd Velocity Reading</label> : &nbsp; <input type="text" name="vr2" id="vr2" value="" readonly="readonly" />
+				</div><!-- end of .mtSingle -->
+				<div class="mtSingle" id="mtsvr3">
+					<label>3rd Velocity Reading</label> : &nbsp; <input type="text" name="vr3" id="vr3" value="" readonly="readonly" />
+				</div><!-- end of .mtSingle -->
+			</div><!-- end of .mesTable -->
+			
+			<div class="aniDiv" >
+				<input type="button" id="measureBttn" value="Measure" />
+			</div><!-- end of .aniDiv -->
+			
+			<div class="mesTable" >
+				<div class="mtSingle measureDiv">
+					<label>Average Velocity</label> : &nbsp; <input type="text" name="av" id="av" value="" readonly="readonly" />
+				</div><!-- end of .mtSingle -->
+				<div class="mtSingle measureDiv">
+					<label>Velocity Pressure</label> : &nbsp; <input type="text" name="vp" id="vp" value="" readonly="readonly" />
+				</div><!-- end of .mtSingle -->
+			</div><!-- end of .mesTable -->
+			
+			
+			
+			<div class="aniDiv" >
+				<input type="button" id="calculateBttn" value="Calculate" />
+			</div><!-- end of .aniDiv -->
+			
+			<div class="mesTable" >
+				<div class="mtSingle calculateDiv">
+					<label>Central Velocity</label> : &nbsp; <input type="text" name="cv" id="cv" value="" readonly="readonly" />
+				</div><!-- end of .mtSingle -->
+				<div class="mtSingle calculateDiv">
+					<label>Method Factor</label> : &nbsp; <input type="text" name="mf" id="mf" value="" readonly="readonly" />
+				</div><!-- end of .mtSingle -->
+			</div><!-- end of .mesTable -->
+			
+			<div class="aniDiv" >
+				<input type="button" id="addResultBttn" value="Add Result" />
+			</div><!-- end of .aniDiv -->
+			
+			<h2 >Observation Table</h2>
+			<table  width="100%" id="table" class="mesTable addTableData">
+			  <thead>
+				  <tr>
+					<th scope="col">Average Velocity</th>
+					<th scope="col">Central Velocity</th>
+					<th scope="col">Method Factor</th>
+				  </tr>
+			  </thead>
+			  <tbody>
+
+			  </tbody>
+			</table>
+
+
+		</div><!-- end of .rightSidebarSimulator -->  
+		<div class="clearfix"></div>              
+	</div>
+
+	<!-- Add JS at the bottom of HTML file --> 
+	<script src="js/modernizr-1.5.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.7.1.min.js"></script>
+	<script src='https://cdn.plot.ly/plotly-1.39.4.min.js'></script>
+    <script src="js/main.js"></script>
+	
+		
+<script src="../assets/js/iframeResize.js"></script></body>
+</html>
+<!--plotly-2.16.1.min.js-->

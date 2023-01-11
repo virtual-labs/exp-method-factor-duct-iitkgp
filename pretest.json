@@ -1,0 +1,41 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "To determine method factor:",
+      "answers": {
+        "a": "Method Factor = Average Velocity (V<sub>arg</sub>)/Central Velocity (V<sub>c</sub>)",
+        "b": "Method Factor = Average Velocity (V<sub>arg</sub>)+Central Velocity (V<sub>c</sub>)",
+        "c": "Method Factor = Average Velocity (V<sub>arg</sub>)-Central Velocity (V<sub>c</sub>)",
+        "d": "None"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "For laminar flow, velocity profile resembles to: ",
+      "answers": {
+        "a": "Circular shape",
+        "b": "D shape",
+        "c": "Parabolic shape",
+        "d": "Rectangular"
+      },
+      
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "For turbulent flow, which shape does it takes:",
+      "answers": {
+        "a": "Circular shape",
+        "b": "D shape",
+        "c": "Parabolic shape",
+        "d": "Rectangular shape"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What are the two types of traversing conducted to measure average velocity?",
+      "answers": {
+        "a": "Continuous traversing and precise traversing",
+        "b": "Discontinuous traversing and precise traversing",
+        "c": "Continuous traversing and imprecise traversing",
+        "d": "None"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The value of method factor decreases with decrease in Reynolds Number.",
+      "answers": {
+        "a": "False",
+        "b": "True"
+        
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
