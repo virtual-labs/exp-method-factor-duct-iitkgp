@@ -215,9 +215,12 @@
 var xArray=[];
 var yArray=[];
 var rows;
+var dataPointai =[];
+var chart;
 
 function showgraph(){
-
+	
+	 
 var otable= document.getElementById('table');
 
 for (var tabrowindex = 1; tabrowindex < otable.rows.length; tabrowindex++) {
@@ -240,11 +243,14 @@ var data = [
 	title: "Central Velocity Vs Average Velocity"
   };
   
-  Plotly.newPlot("myPlot", data, layout);
+  
+  Plotly.newPlot("myPlot", data, layout, {displayModeBar: 'true'});
   document.getElementById('bestgraphBttn').style.display="block";
   
 }
-
+document.getElementById("printgraph").addEventListener("click",function(){
+	chart.print();
+}); 
 function bestshowgraph(){
 	//document.getElementById('myPlotb').style.display="block";
 
@@ -267,6 +273,7 @@ function bestshowgraph(){
 	 xValues.push(x);
 	 yValues.push(x * slope);
    }
+   
 	var data = [
 		{x:xArray, y:yArray, mode:"markers"},
         {x:xValues, y:yValues, mode:"line"}
@@ -279,4 +286,6 @@ function bestshowgraph(){
 	  };
 	  
 	  Plotly.newPlot("myPlot", data, layout);
+	  
 }
+ 

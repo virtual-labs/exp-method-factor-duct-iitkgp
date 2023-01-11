@@ -172,3 +172,20 @@ h1.exp_header {
 	text-align: center;
     font-size: 20px;
 }
+
+#printable { display: none; }
+
+#printable { display: none; } 
+   
+@media print {
+    
+	#non-printable { display: none; }
+        #printable { display: block; }
+    }
+    
+  
+   @media print {
+    #myPlot {
+      padding-right: 1cm;
+    }
+  }
